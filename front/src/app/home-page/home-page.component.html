@@ -1,0 +1,15 @@
+<!-- New member form -->
+<h2>Ajouter un(e) Argonaute</h2>
+<form class="new-member-form" [formGroup]="argonauteForm" (ngSubmit)="createArgonaute()">
+    <label for="name">Nom de l'Argonaute</label>
+    <input id="name" name="name" type="text" placeholder="Corentin" formControlName="name">
+    <button type="submit">Envoyer</button>
+</form>
+
+<!-- Member list -->
+<h2>Membres de l'équipage</h2>
+<section class="member-list">
+    <div class="member-item" *ngFor="let argonaute of argonauteList">
+        {{ argonaute.name }}
+    </div>
+</section>
